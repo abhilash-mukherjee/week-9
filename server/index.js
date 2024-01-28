@@ -11,7 +11,10 @@ app.use(express.json());
 
 app.use("/admin", adminRouter)
 app.use("/user", userRouter)
-
+app.get("/",handleRootQuery)
+function handleRootQuery(req,res){
+    res.send('Hello World')
+}
 
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
