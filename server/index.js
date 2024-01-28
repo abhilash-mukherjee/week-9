@@ -13,7 +13,7 @@ app.use("/admin", adminRouter)
 app.use("/user", userRouter)
 app.get("/",handleRootQuery)
 function handleRootQuery(req,res){
-    res.send('Hello World!!!??iubuib')
+    res.send('Hello World!!!??iuib')
 }
 
 // Connect to MongoDB
