@@ -19,11 +19,8 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" > keyfile
         chmod 600 keyfile
+        cat keyfile
         mkdir -p ~/.ssh
         cp known_hosts ~/.ssh/known_hosts
-        chmod 700 ~/.ssh
-        chmod 644 ~/.ssh/known_hosts
-        # Verifying the contents of known_hosts
-        echo "Contents of known_hosts:"
         cat ~/.ssh/known_hosts
         ssh -t -i keyfile ubuntu@ec2-13-233-173-57.ap-south-1.compute.amazonaws.com "bash ~/deploy.sh"
